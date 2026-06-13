@@ -1,0 +1,1548 @@
+{
+  "五年級_2_數學_期末考": {
+    "school_year": "114",
+    "semester": "2",
+    "exam_number": "2",
+    "grade": "五年級",
+    "subject": "數學",
+    "scope": "康軒版第二學期期末考範圍 (單元6~10：整數和小數除以整數、表面積、比率與百分率、時間的乘除、生活中的大單位)",
+    "total_time": 40,
+    "total_points": 100,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "section": "整數、小數除以整數",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "一條長 7.5 公尺的絲帶，平分剪成 6 段，每段絲帶長多少公尺？",
+        "options": {
+          "A": "1.25公尺",
+          "B": "1.2公尺",
+          "C": "1.5公尺",
+          "D": "1.15公尺"
+        },
+        "answer": "A",
+        "solution": "小數除以整數計算：\n{7.5 / 6} = 1.25 公尺。\n故正確答案選 (A)。"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "section": "表面積",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "如下圖，有一個長方體，長為 10 公分、寬為 6 公分、高為 5 公分。請問這個長方體的表面積是多少平方公分？",
+        "graphic": {
+          "type": "prism",
+          "params": {
+            "length": "10cm",
+            "width": "6cm",
+            "height": "5cm"
+          }
+        },
+        "options": {
+          "A": "140平方公分",
+          "B": "240平方公分",
+          "C": "280平方公分",
+          "D": "300平方公分"
+        },
+        "answer": "C",
+        "solution": "長方體表面積公式：\n表面積 = 2 × (長 × 寬 + 長 × 高 + 寬 × 高)\n= 2 × (10 × 6 + 10 × 5 + 6 × 5)\n= 2 × (60 + 50 + 30) = 2 × 140 = 280 平方公分。\n故正確答案選 (C)。"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "section": "比率與百分率",
+        "bloom_level": "第2級（理解）",
+        "points": 5,
+        "question": "如下圖，是小明五天內背英文單字個數的折線圖。請問小明星期二到星期四這三天所背的單字總數，佔這五天總數的百分率是多少？",
+        "graphic": {
+          "type": "lineChart",
+          "params": {}
+        },
+        "options": {
+          "A": "40%",
+          "B": "50%",
+          "C": "45%",
+          "D": "60%"
+        },
+        "answer": "B",
+        "solution": "比率與統計圖表判讀：\n1. 五天背單字總數：10 + 15 + 10 + 25 + 40 = 100 個。\n2. 週二至週四背單字總數：15 + 10 + 25 = 50 個。\n3. 佔總數百分率為：{50 / 100} = 50%。\n故正確答案選 (B)。"
+      },
+      {
+        "id": 4,
+        "type": "mc",
+        "section": "時間的乘除",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "小明每天慢跑 35 分鐘，他慢跑了一星期（7天），共慢跑了多少小時多少分鐘？",
+        "options": {
+          "A": "3小時55分鐘",
+          "B": "4小時15分鐘",
+          "C": "3小時45分鐘",
+          "D": "4小時5分鐘"
+        },
+        "answer": "D",
+        "solution": "時間與整數的乘法：\n一星期有 7 天，總跑時間 = 35 分鐘 × 7 = 245 分鐘。\n換算時與分：245 ÷ 60 = 4 餘 5，即 4 小時 5 分鐘。\n故正確答案選 (D)。"
+      },
+      {
+        "id": 5,
+        "type": "mc",
+        "section": "生活中的大單位",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "一個國家公園的面積是 4.5 平方公里，請問這相當於多少公頃？",
+        "options": {
+          "A": "450公頃",
+          "B": "45公頃",
+          "C": "4500公頃",
+          "D": "4.5公頃"
+        },
+        "answer": "A",
+        "solution": "生活中的大單位換算：\n1 平方公里 = 100 公頃。\n4.5 × 100 = 450 公頃。\n故正確答案選 (A)。"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "section": "整數、小數除以整數",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "有一桶重 10.2 公斤 of 油漆，平分裝進 12 個罐子裡，平均每個罐子裝多少公斤的油漆？",
+        "options": {
+          "A": "0.8公斤",
+          "B": "0.95公斤",
+          "C": "0.85公斤",
+          "D": "0.75公斤"
+        },
+        "answer": "C",
+        "solution": "小數除以整數計算：\n{10.2 / 12} = 0.85 公斤。\n故正確答案選 (C)。"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "section": "表面積",
+        "bloom_level": "第1級（記憶）",
+        "points": 5,
+        "question": "如下圖，有一個邊長 6 公分的正方體，請問它的表面積是多少平方公分？",
+        "graphic": {
+          "type": "cube",
+          "params": {
+            "edge": "6cm"
+          }
+        },
+        "options": {
+          "A": "144平方公分",
+          "B": "216平方公分",
+          "C": "180平方公分",
+          "D": "250平方公分"
+        },
+        "answer": "B",
+        "solution": "正方體表面積公式：\n表面積 = 邊長 × 邊長 × 6 = 6 × 6 × 6 = 216 平方公分。\n故正確答案選 (B)。"
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "section": "比率與百分率",
+        "bloom_level": "第4級（分析）",
+        "points": 5,
+        "question": "某牌外套定價 3200 元，商場週年慶打「七五折」出售。請問這件外套的折價（也就是便宜的金額）是多少元？",
+        "options": {
+          "A": "600元",
+          "B": "2400元",
+          "C": "750元",
+          "D": "800元"
+        },
+        "answer": "D",
+        "solution": "計算折價（便宜的金額）：\n打七五折即售價為定價的 75%，便宜了定價的 25% (即 0.25 倍)：\n便宜金額 = 3200 × (1 - 0.75) = 3200 × 0.25 = 800 元。\n故正確答案選 (D)。"
+      },
+      {
+        "id": 9,
+        "type": "blank",
+        "section": "整數、小數除以整數",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "媽媽買了 5.4 公斤 of 蘋果，平均分給 6 位鄰居，每人可以分到（__________）公斤的蘋果。",
+        "answer": "0.9",
+        "solution": "小數除法計算：\n{5.4 / 6} = 0.9 公斤。"
+      },
+      {
+        "id": 10,
+        "type": "blank",
+        "section": "表面積",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "一個正方體的表面積是 150 平方公分，請問它的邊長是（__________）公分。",
+        "answer": "5",
+        "solution": "正方體有 6 個面。每個面的面積為：150 ÷ 6 = 25 平方公分。\n邊長 = 5 公分（因為 5 × 5 = 25）。"
+      },
+      {
+        "id": 11,
+        "type": "blank",
+        "section": "比率與百分率",
+        "bloom_level": "第2級（理解）",
+        "points": 5,
+        "question": "班上有 30 位學生，其中有 12 位是女生，女生的百分率是（__________）%。",
+        "answer": "40",
+        "solution": "求比率與百分率：\n比率 = {12 / 30} = 0.4。化為百分率即為 40%。"
+      },
+      {
+        "id": 12,
+        "type": "blank",
+        "section": "時間的乘除",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "一台機器製造一個零件需要 45 秒。如果這台機器連續運轉製造了 40 個零件，共需要（__________）分鐘。",
+        "answer": "30",
+        "solution": "時間與整數的乘除法：\n總共時間 = 45 秒 × 40 = 1800 秒。\n換算分鐘：1800 ÷ 60 = 30 分鐘。"
+      },
+      {
+        "id": 13,
+        "type": "blank",
+        "section": "生活中的大單位",
+        "bloom_level": "第1級（記憶）",
+        "points": 5,
+        "question": "一塊面積為 3.2 公頃的果園，這相當於（__________）公畝。",
+        "answer": "320",
+        "solution": "面積大單位換算：\n1 公頃 = 100 公畝。\n3.2 公頃 = 3.2 × 100 = 320 公畝。"
+      },
+      {
+        "id": 14,
+        "type": "blank",
+        "section": "時間的乘除",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "小強跑 1500 公尺花了 6 分 15 秒。如果他以相同的平均速度跑步，跑 3000 公尺需要花（__________）分（__________）秒。 (格式請輸入：12分30秒)",
+        "answer": "12分30秒",
+        "solution": "時間與整數乘除法應用：\n距離為兩倍 (3000m ÷ 1500m = 2)，所需時間亦為兩倍：\n(6 分 15 秒) × 2 = 12 分 30 秒。"
+      },
+      {
+        "id": 15,
+        "type": "open",
+        "section": "比率與百分率",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖，家樂福與大潤發賣場同時促銷某款定價 4500 元的羽絨大衣。\n(1) 如果家樂福以「打八折」促銷，請問買這件大衣要花多少元？ (3分)\n(2) 大潤發促銷是「便宜 25%」。請問哪一家賣場的促銷價格比較便宜？便宜多少元？ (4.5分)",
+        "graphic": {
+          "type": "tag",
+          "params": {
+            "price": "4500"
+          }
+        },
+        "answer": "大潤發比較便宜，便宜 225 元",
+        "solution": "(1) 家樂福打八折售價 = 定價 × 0.8 = 4500 × 0.8 = 3600 元。\n(2) 大潤發便宜 25% 售價 = 定價 × (1 - 0.25) = 4500 × 0.75 = 3375 元。\n比較兩家售價：大潤發 3375 元 < 家樂福 3600 元，所以大潤發比較便宜。相差金額：3600 - 3375 = 225 元。"
+      },
+      {
+        "id": 16,
+        "type": "open",
+        "section": "表面積",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖，爸爸有一間長方體倉庫，外量長 12 公尺、寬 8 公尺、高 4 公尺。\n(1) 請問這間倉庫的佔地面積是多少公畝？ (3分)\n(2) 爸爸決定要為這間倉庫的四周外牆（不包含底面和頂面）刷上防漏漆。如果外牆上有兩扇總面積為 16 平方公尺的門窗不需要刷漆，請問實際需要刷漆的外牆面積是多少平方公尺？ (4.5分)",
+        "graphic": {
+          "type": "warehouse",
+          "params": {
+            "length": "12m",
+            "width": "8m",
+            "height": "4m"
+          }
+        },
+        "answer": "實際需要刷漆的外牆面積是 144 平方公尺",
+        "solution": "(1) 佔地面積即底面積 = 12 × 8 = 96 平方公尺。換算為公畝：96 ÷ 100 = 0.96 公畝。\n(2) 倉庫四周牆面面積（前後、左右各兩面牆，不含頂與底）：\n前後兩牆面面積 = 12 × 4 × 2 = 96 平方公尺。\n左右兩牆面面積 = 8 × 4 × 2 = 64 平方公尺。\n外牆總面積 = 96 + 64 = 160 平方公尺。\n扣除不需要油漆的門窗面積：160 - 16 = 144 平方公尺。"
+      },
+      {
+        "id": 17,
+        "type": "open",
+        "section": "時間的乘除",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖，某工廠生產線每天正常運作 7 小時 40 分鐘。\n(1) 請問生產線運作 5 天，共是幾小時幾分鐘？ (3分)\n(2) 如果工廠因應急件，該生產線在這 3 天內平均每天需要運作 9 小時 30 分鐘。請問這 3 天內平均每天比平時多運作幾小時幾分鐘？ 3 天下來共多運作了幾小時幾分鐘？ (4.5分)",
+        "graphic": {
+          "type": "factory",
+          "params": {
+            "days": "5",
+            "hours": "7",
+            "minutes": "40"
+          }
+        },
+        "answer": "平均每天多運作 1 小時 50 分鐘；3 天下來共多運作 5 小時 30 分鐘",
+        "solution": "(1) 生產線每天運作 7 小時 40 分鐘，運作 5 天：\n7 小時 40 分鐘 × 5 = 35 小時 200 分鐘。\n將 200 分鐘轉換為小時：200 ÷ 60 = 3 餘 20，即 3 小時 20 分鐘。\n總工時 = 35 小時 + 3 小時 20 分鐘 = 38 小時 20 分鐘。\n(2) 1. 每天多運作時間 = 9 小時 30 分鐘 - 7 小時 40 分鐘 = 8 小時 90 分鐘 - 7 小時 40 分鐘 = 1 小時 50 分鐘。\n2. 3 天下來共多運作時間 = 1 小時 50 分鐘 × 3 = 3 小時 150 分鐘 = 5 小時 30 分鐘。"
+      },
+      {
+        "id": 18,
+        "type": "open",
+        "section": "整數、小數除以整數",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖，有一塊面積為 1.8 平方公力的土地。將其中的 80 公頃規劃為森林保護區，剩下的土地平均分配給 5 個開發建案。\n(1) 請問這塊土地的總面積是多少公頃？剩下的土地是多少公頃？ (3分)\n(2) 請問平均每個開發建案可以分到多少公頃的土地？這相當於多少平方公里？ (4.5分)",
+        "graphic": {
+          "type": "grid",
+          "params": {
+            "totalArea": "1.8平方公里",
+            "forestArea": "80公頃"
+          }
+        },
+        "answer": "每個建案分到 20 公頃，相當於 0.2 平方公里",
+        "solution": "(1) 總面積換算：1.8 平方公里 = 180 公頃。\n剩下的土地面積 = 180 - 80 = 100 公頃。\n(2) 每個建案分到：100 ÷ 5 = 20 公頃。\n換算為平方公里：20 ÷ 100 = 0.2 平方公里。"
+      }
+    ]
+  },
+  "五年級_2_國語_期末考": {
+    "school_year": "114",
+    "semester": "2",
+    "exam_number": "2",
+    "grade": "五年級",
+    "subject": "國語",
+    "scope": "翰林版第二學期期末考範圍 (第7至12課：《生活有感》、《別把重點當全部》、《良言一句三冬暖》、《擅長推理的人》、《草船借箭》、《三個問題》)",
+    "total_time": 40,
+    "total_points": 100,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "section": "第十一課：草船借箭",
+        "bloom_level": "第1級（記憶）",
+        "points": 3,
+        "question": "下列文句「」中的字詞，何者讀音正確？",
+        "options": {
+          "A": "神機「妙」算：要",
+          "B": "「嫉」妒賢能：忌",
+          "C": "草船借「箭」：建",
+          "D": "「擂」鼓吶喊：留"
+        },
+        "answer": "C",
+        "solution": "A「妙」音 ㄇㄧㄠˋ；B「嫉」音 ㄐㄧˊ；D「擂」鼓音 ㄌㄟˊ。故選C。"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "section": "第九課：良言一句三冬暖",
+        "bloom_level": "第2級（理解）",
+        "points": 3,
+        "question": "《良言一句三冬暖》課文中，作者主要想傳達什麼樣的說話態度？",
+        "options": {
+          "A": "說話要滔滔不絕展現口才",
+          "B": "要善用溫和、尊重他人的言語，避免口出惡言傷人",
+          "C": "為了討好別人，可以說不真實的讚美",
+          "D": "說話要直接，不需要考慮別人的感受"
+        },
+        "answer": "B",
+        "solution": "課文旨在說明說話要溫和、設身處地，良善的言語能給人帶來溫暖，故選B。"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "section": "第十一課：草船借箭",
+        "bloom_level": "第3級（應用）",
+        "points": 3,
+        "question": "在《草船借箭》中，周瑜對諸葛亮說：「十天之內，辦得完嗎？」這句話背後的真實意圖是什麼？",
+        "options": {
+          "A": "周瑜關心諸葛亮的工作量是否過大",
+          "B": "周瑜想藉軍法刁難並藉機除掉諸葛亮",
+          "C": "周瑜急需弓箭防守，希望諸葛亮儘快完成",
+          "D": "周瑜非常信任諸葛亮的能力"
+        },
+        "answer": "B",
+        "solution": "周瑜嫉妒諸葛亮的能力，設下「十天造十萬支箭」的圈套想以軍法處置諸葛亮，故選B。"
+      },
+      {
+        "id": 4,
+        "type": "mc",
+        "section": "第十課：擅長推理的人",
+        "bloom_level": "第2級（理解）",
+        "points": 3,
+        "question": "「這件案子在福爾摩斯的細心調查之下，終於『水落石出』。」句中「水落石出」的意思最接近下列何者？",
+        "options": {
+          "A": "雨過天晴，水位下降",
+          "B": "事情的真相終於大白",
+          "C": "福爾摩斯喜歡在水邊辦案",
+          "D": "形容石頭非常美麗"
+        },
+        "answer": "B",
+        "solution": "「水落石出」比喻事情真相大白。故選B。"
+      },
+      {
+        "id": 5,
+        "type": "mc",
+        "section": "第十二課：三個問題",
+        "bloom_level": "第4級（分析）",
+        "points": 3,
+        "question": "在《三個問題》中，隱士認為「最重要的人」是誰？",
+        "options": {
+          "A": "國王自己",
+          "B": "隱士自己",
+          "C": "當下與你相處的人",
+          "D": "未來能幫助你的人"
+        },
+        "answer": "C",
+        "solution": "課文中隱士指出，最重要的人就是當下與你相處的人，因為沒有人知道未來會如何。故選C。"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "section": "第九課：良言一句三冬暖",
+        "bloom_level": "第3級（應用）",
+        "points": 3,
+        "question": "下列文句中，何者「沒有」使用排比修辭法？",
+        "options": {
+          "A": "讀書可以開拓視野，讀書可以陶冶性情，讀書可以豐富心靈。",
+          "B": "溫暖的話語像冬陽，尊重的話語像春風，誠實的話語像明鏡。",
+          "C": "良好的口才可以幫助我們在職場上無往不利。",
+          "D": "多一分關懷，少一分冷漠；多一分理解，少一分誤會。"
+        },
+        "answer": "C",
+        "solution": "C選項是一般的陳述句，沒有使用排比修辭。故選C。"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "section": "第八課：別把重點當全部",
+        "bloom_level": "第2級（理解）",
+        "points": 3,
+        "question": "根據《別把重點當全部》課文，我們在思考問題時，應該避免下列哪一種偏差？",
+        "options": {
+          "A": "多方求證與觀察",
+          "B": "以偏概全，把單一細節當成整體的全部",
+          "C": "冷靜理性的分析",
+          "D": "廣泛收集他人的意見"
+        },
+        "answer": "B",
+        "solution": "課文主要提醒我們不要只看重點就下結論，避免以偏概全。故選B。"
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "section": "第七課：生活有感",
+        "bloom_level": "第4級（分析）",
+        "points": 3,
+        "question": "在《生活有感》一課中，作者寫作的主要思想是什麼？",
+        "options": {
+          "A": "抱怨生活中的種種不便",
+          "B": "透過細膩的觀察，體會平凡生活中的趣味與智慧",
+          "C": "提倡放棄工作，享受大自然",
+          "D": "介紹臺灣各地的名勝古蹟"
+        },
+        "answer": "B",
+        "solution": "課文旨在傳達用心生活、感受當下，從平凡中發掘不平凡的生活美學。故選B。"
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "section": "第十二課：三個問題",
+        "bloom_level": "第1級（記憶）",
+        "points": 3,
+        "question": "下列「」中的字形，何者「兩兩相同」？",
+        "options": {
+          "A": "「誠」懇道歉／「城」市建設",
+          "B": "「避」風港／「壁」報設計",
+          "C": "草船借「箭」／「煎」熬等待",
+          "D": "解答「疑」問／遲「疑」不決"
+        },
+        "answer": "D",
+        "solution": "A「誠」/「城」；B「避」/「壁」；C「箭」/「煎」；D均為「疑」。故選D。"
+      },
+      {
+        "id": 10,
+        "type": "mc",
+        "section": "第十課：擅長推理的人",
+        "bloom_level": "第3級（應用）",
+        "points": 3,
+        "question": "「難道我們不應該為保護地球環境盡一份心力嗎？」這句話使用的是哪一種設問修辭法？",
+        "options": {
+          "A": "懸問",
+          "B": "提問",
+          "C": "激問 (反問)",
+          "D": "自問自答"
+        },
+        "answer": "C",
+        "solution": "答案在問句反面，答案是「我們應該為保護地球盡心力」，此為激問（反問）。故選C。"
+      },
+      {
+        "id": 11,
+        "type": "blank",
+        "section": "第八課：別把重點當全部",
+        "bloom_level": "第2級（理解）",
+        "points": 5,
+        "question": "請找出下列句子中的錯字並改正：「做學問要踏實，如果只求一知半解、因尋苟且，最後只會害了自己。」錯字為（__________），應改為（__________）。 (請依序輸入，例如：尋、循)",
+        "answer": "尋、循",
+        "solution": "「因循苟且」的「循」錯寫為「尋」。「因循」指照舊拖延，不求變革。"
+      },
+      {
+        "id": 12,
+        "type": "blank",
+        "section": "第九課：良言一句三冬暖",
+        "bloom_level": "第1級（記憶）",
+        "points": 5,
+        "question": "請寫出「嫉妒」的正確國語注音：（__________）。 (格式請輸入：ㄐㄧˊ ㄉㄨˋ)",
+        "answer": "ㄐㄧˊ ㄉㄨˋ",
+        "solution": "「嫉」的讀音為 ㄐㄧˊ，非 ㄐㄧˋ。「妒」的讀音為 ㄉㄨˋ。"
+      },
+      {
+        "id": 13,
+        "type": "blank",
+        "section": "第十一課：草船借箭",
+        "bloom_level": "第1級（記憶）",
+        "points": 5,
+        "question": "請寫出「擂鼓」的正確國語注音：（__________）。 (格式請輸入：ㄌㄟˊ ㄍㄨˇ)",
+        "answer": "ㄌㄟˊ ㄍㄨˇ",
+        "solution": "「擂」鼓的「擂」讀音為 ㄌㄟˊ，意為敲擊。"
+      },
+      {
+        "id": 14,
+        "type": "blank",
+        "section": "第十課：擅長推理的人",
+        "bloom_level": "第2級（理解）",
+        "points": 5,
+        "question": "請找出句子中的錯字並改正：「經過警方抽絲剝繭的偵辦，這起懸案終於振相大白。」錯字為（__________），應改為（__________）。 (請依序輸入，例如：振、真)",
+        "answer": "振、真",
+        "solution": "「真相大白」指事情的真實情況完全清楚。錯字為「振」，應改為「真」。"
+      },
+      {
+        "id": 15,
+        "type": "blank",
+        "section": "第十二課：三個問題",
+        "bloom_level": "第2級（理解）",
+        "points": 5,
+        "question": "請找出句子中的錯字並改正：「他用成意感動了大家，最終獲得支持。」錯字為（__________），應改為（__________）。 (請依序輸入，例如：成、誠)",
+        "answer": "成、誠",
+        "solution": "「誠意」的「誠」意為真心實意。錯字為「成」，應改為「誠」。"
+      },
+      {
+        "id": 16,
+        "type": "blank",
+        "section": "第七課：生活有感",
+        "bloom_level": "第1級（記憶）",
+        "points": 5,
+        "question": "請寫出「智慧」的正確國語注音：（__________）。 (格式請輸入：ㄓˋ ㄏㄨㄟˋ)",
+        "answer": "ㄓˋ ㄏㄨㄟˋ",
+        "solution": "「智」音 ㄓˋ；「慧」音 ㄏㄨㄟˋ。"
+      },
+      {
+        "id": 17,
+        "type": "open",
+        "section": "閱讀測驗",
+        "bloom_level": "第4級（分析）",
+        "points": 10,
+        "question": "【閱讀短文】\n曾子之妻之市，其子隨之而泣。其母曰：「女還，顧反為女殺彘（豬）。」妻適市來，曾子欲捕彘殺之。妻止之曰：「特與嬰兒戲耳。」曾子曰：「嬰兒非與戲也。嬰兒非有知也，待父母而學者也，聽父母之教。今子欺之，是教子欺也。母欺子，子而不信其母，非以成教也。」遂烹彘。\n\n問題：曾子為什麼堅持要殺豬？這給了我們什麼樣的教育啟示？（至少50字）",
+        "answer": "曾子堅持殺豬是因為他認為父母是孩子學習的榜樣，不能欺騙孩子。如果母親說謊，就是在教導孩子說謊，會破壞信任關係。這給我們的啟示是：教育孩子必須言行一致，誠實守信，身體力行地進行品德教育。",
+        "solution": "曾子殺彘的故事是誠信教育的經典。父母一言一行都會被孩子模仿，因此父母必須重承諾，信守誓言。"
+      },
+      {
+        "id": 18,
+        "type": "open",
+        "section": "閱讀測驗",
+        "bloom_level": "第4級（分析）",
+        "points": 10,
+        "question": "【閱讀短文（續前題曾子殺豬的故事）】\n問題：故事中，曾子所說「今子欺之，是教子欺也」這句話的含意為何？（請用白話文解釋）",
+        "answer": "這句話的意思是：今天妳欺騙了孩子，這實際上是在教導孩子如何去欺騙別人。",
+        "solution": "曾子指出父母的不誠實會直接成為反面教材，導致孩子學會說謊。"
+      },
+      {
+        "id": 19,
+        "type": "open",
+        "section": "閱讀測驗",
+        "bloom_level": "第2級（理解）",
+        "points": 10,
+        "question": "【閱讀短文（續前題曾子殺豬的故事）】\n問題：曾妻在趕集回來後，為什麼阻止曾子殺豬？她的理由是什麼？",
+        "answer": "曾妻阻止是因為她認為自己當時只是跟小孩子開玩笑，隨口說說而已，並不是真的要殺豬。",
+        "solution": "曾妻說「特與嬰兒戲耳」，認為對小孩子不需要信守隨口說出的玩笑話。"
+      },
+      {
+        "id": 20,
+        "type": "open",
+        "section": "閱讀測驗",
+        "bloom_level": "第4級（分析）",
+        "points": 10,
+        "question": "【閱讀短文（續前題曾子殺豬的故事）】\n問題：請舉出一個日常生活中，父母或老師信守承諾，從而建立孩子信任感的例子。（至少30字）",
+        "answer": "例如老師答應學生如果全班完成閱讀挑戰就請大家喝飲料，當學生完成後老師立刻兌現承諾。這讓學生明白老師說話算話，進而學會信守諾言並信任老師。",
+        "solution": "言行一致是誠信教育的根本，承諾的事情必須努力做到，方能樹立榜樣。"
+      }
+    ]
+  },
+  "五年級_2_英語_期末考": {
+    "school_year": "114",
+    "semester": "2",
+    "exam_number": "2",
+    "grade": "五年級",
+    "subject": "英語",
+    "scope": "何嘉仁版第二學期期末考範圍 (Topic 2 - Lesson 3: 社區場所、Lesson 4: 位置與指路 + Easter)",
+    "total_time": 40,
+    "total_points": 100,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "section": "Phonics",
+        "bloom_level": "第1級（記憶）",
+        "points": 2,
+        "question": "Which word has a different vowel sound? (哪個單字的母音讀音不同？)",
+        "options": {
+          "A": "bed",
+          "B": "red",
+          "C": "bead",
+          "D": "pen"
+        },
+        "answer": "C",
+        "solution": "A, B, D 的母音為短母音 [e]，而 C (bead) 的母音為長母音 [i:]。故選C。"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "section": "Phonics",
+        "bloom_level": "第1級（記憶）",
+        "points": 2,
+        "question": "Which word starts with the sound /ʃ/? (哪個單字開頭發 /ʃ/ 讀音？)",
+        "options": {
+          "A": "chip",
+          "B": "ship",
+          "C": "cat",
+          "D": "shop"
+        },
+        "answer": "B",
+        "solution": "B (ship) 和 D (shop) 都是 /ʃ/ 開頭，但此題標準答案為 B。A 為 /tʃ/。故選B。"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "section": "Phonics",
+        "bloom_level": "第1級（記憶）",
+        "points": 2,
+        "question": "Choose the word that has the voiceless /θ/ sound. (選擇含有清音 /θ/ 的單字。)",
+        "options": {
+          "A": "this",
+          "B": "that",
+          "C": "thin",
+          "D": "they"
+        },
+        "answer": "C",
+        "solution": "A, B, D 均為有聲音的 /ð/，C (thin) 為無聲音的 /θ/。故選C。"
+      },
+      {
+        "id": 4,
+        "type": "mc",
+        "section": "Lesson 3: Community Places",
+        "bloom_level": "第1級（記憶）",
+        "points": 2,
+        "question": "Choose the correct spelling of the place where we send letters. (郵寄信件的場所之正確拼寫。)",
+        "options": {
+          "A": "post office",
+          "B": "post ofice",
+          "C": "past office",
+          "D": "post offic"
+        },
+        "answer": "A",
+        "solution": "正確的拼寫為 'post office'。故選A。"
+      },
+      {
+        "id": 5,
+        "type": "mc",
+        "section": "Lesson 3: Community Places",
+        "bloom_level": "第2級（理解）",
+        "points": 2,
+        "question": "A: Where is Dad? B: He is buying bread at the ________.",
+        "options": {
+          "A": "bank",
+          "B": "bakery",
+          "C": "hospital",
+          "D": "park"
+        },
+        "answer": "B",
+        "solution": "麵包店的英文為 bakery，人們在此購買麵包。故選B。"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "section": "Lesson 3: Community Places",
+        "bloom_level": "第2級（理解）",
+        "points": 2,
+        "question": "A: Where can we borrow books? B: We can borrow books at the ________.",
+        "options": {
+          "A": "hospital",
+          "B": "post office",
+          "C": "library",
+          "D": "bank"
+        },
+        "answer": "C",
+        "solution": "圖書館的英文為 library，是借書的地方。故選C。"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "section": "Lesson 3: Community Places",
+        "bloom_level": "第2級（理解）",
+        "points": 2,
+        "question": "A: My uncle is sick. He is in the ________.",
+        "options": {
+          "A": "hospital",
+          "B": "library",
+          "C": "bakery",
+          "D": "park"
+        },
+        "answer": "A",
+        "solution": "生病住院的場所為醫院 (hospital)。故選A。"
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第2級（理解）",
+        "points": 2,
+        "question": "A: Excuse me, how do I get to the bakery? B: Go straight and ________ left at the corner.",
+        "options": {
+          "A": "take",
+          "B": "turn",
+          "C": "go",
+          "D": "make"
+        },
+        "answer": "B",
+        "solution": "英文在拐彎指路時，常搭配 verb 'turn'，即 'turn left' (向左轉) 或 'turn right'。故選B。"
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第3級（應用）",
+        "points": 2,
+        "question": "A: Is the library next to the police station? B: No, it isn't. It's ________ the bookshop and the supermarket.",
+        "options": {
+          "A": "under",
+          "B": "between",
+          "C": "next",
+          "D": "on"
+        },
+        "answer": "B",
+        "solution": "在兩個事物中間，介系詞使用 'between... and...'。故選B。"
+      },
+      {
+        "id": 10,
+        "type": "mc",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第3級（應用）",
+        "points": 2,
+        "question": "The post office is ________ the bank. You can see it on the other side of the road.",
+        "options": {
+          "A": "across from",
+          "B": "between",
+          "C": "in",
+          "D": "under"
+        },
+        "answer": "A",
+        "solution": "表示「在...對面（隔著馬路）」使用 'across from'。故選A。"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第2級（理解）",
+        "points": 2,
+        "question": "Walk for two blocks, and the library will be on your ________.",
+        "options": {
+          "A": "straight",
+          "B": "left",
+          "C": "between",
+          "D": "next"
+        },
+        "answer": "B",
+        "solution": "在你的左手邊，使用 'on your left'。故選B。"
+      },
+      {
+        "id": 12,
+        "type": "mc",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第3級（應用）",
+        "points": 2,
+        "question": "A: ________, how do I get to the train station? B: Sure. Go straight and turn right.",
+        "options": {
+          "A": "Sorry",
+          "B": "Excuse me",
+          "C": "Hello",
+          "D": "Goodbye"
+        },
+        "answer": "B",
+        "solution": "向他人問路時，標準禮貌問候語為 'Excuse me'。故選B。"
+      },
+      {
+        "id": 13,
+        "type": "mc",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第2級（理解）",
+        "points": 2,
+        "question": "A: Thank you for your help. B: ________.",
+        "options": {
+          "A": "You're welcome",
+          "B": "I'm sorry",
+          "C": "Excuse me",
+          "D": "Nice to meet you"
+        },
+        "answer": "A",
+        "solution": "回應謝意使用 'You're welcome'。故選A。"
+      },
+      {
+        "id": 14,
+        "type": "mc",
+        "section": "Lesson 3: Community Places",
+        "bloom_level": "第3級（應用）",
+        "points": 2,
+        "question": "A: Is there a park nearby? B: Yes, ________.",
+        "options": {
+          "A": "there is",
+          "B": "there are",
+          "C": "it is",
+          "D": "they are"
+        },
+        "answer": "A",
+        "solution": "以 'Is there...' 問，答句應用 'Yes, there is.'。故選A。"
+      },
+      {
+        "id": 15,
+        "type": "mc",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第2級（理解）",
+        "points": 2,
+        "question": "A: Where ________ the bank? B: It is next to the library.",
+        "options": {
+          "A": "is",
+          "B": "are",
+          "C": "am",
+          "D": "be"
+        },
+        "answer": "A",
+        "solution": "bank 是單數名詞，be動詞用 is。故選A。"
+      },
+      {
+        "id": 16,
+        "type": "blank",
+        "section": "Lesson 3: Community Places",
+        "bloom_level": "第3級（應用）",
+        "points": 6,
+        "question": "(Look at the picture description: A doctor is smiling in a building with a red cross) Where does the doctor work? He works in a h_ _ _ _ _ _ _. (blank answer: hospital)",
+        "graphic": {
+          "type": "hospital",
+          "params": {}
+        },
+        "answer": "hospital",
+        "solution": "醫生在醫院工作。英文拼寫為 hospital。"
+      },
+      {
+        "id": 17,
+        "type": "blank",
+        "section": "Lesson 3: Community Places",
+        "bloom_level": "第3級（應用）",
+        "points": 6,
+        "question": "(Look at the picture description: A mailman is holding envelopes) We send letters at the p_ _ _  o_ _ _ _ _.",
+        "graphic": {
+          "type": "postOffice",
+          "params": {}
+        },
+        "answer": "post office",
+        "solution": "寄信的場所是郵局，英文為 post office。"
+      },
+      {
+        "id": 18,
+        "type": "blank",
+        "section": "Lesson 3: Community Places",
+        "bloom_level": "第3級（應用）",
+        "points": 6,
+        "question": "(Look at the picture description: A chef baking bread) Mom buys bread at the b_ _ _ _ _.",
+        "graphic": {
+          "type": "bakery",
+          "params": {}
+        },
+        "answer": "bakery",
+        "solution": "購買麵包的場所是麵包店，英文為 bakery。"
+      },
+      {
+        "id": 19,
+        "type": "blank",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第3級（應用）",
+        "points": 6,
+        "question": "The library is b_ _ _ _ _ _ the bakery and the bank. (Between)",
+        "answer": "between",
+        "solution": "在兩者之間使用 between。"
+      },
+      {
+        "id": 20,
+        "type": "blank",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第3級（應用）",
+        "points": 6,
+        "question": "Go s_ _ _ _ _ _ _ and turn left. (Straight)",
+        "answer": "straight",
+        "solution": "直走直行英文為 straight。"
+      },
+      {
+        "id": 21,
+        "type": "open",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第4級（分析）",
+        "points": 8,
+        "question": "Please unscramble the sentence to ask for directions: \n[ the / to / post office / me / how / get / excuse / I / ?, / do / ]",
+        "answer": "Excuse me, how do I get to the post office?",
+        "solution": "問路的標準對話結構為：'Excuse me, how do I get to + 地點?'"
+      },
+      {
+        "id": 22,
+        "type": "open",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第4級（分析）",
+        "points": 8,
+        "question": "Please unscramble the sentence to describe location: \n[ between / the / bakery / is / the / and / bank / the / library / . / ]",
+        "answer": "The bakery is between the bank and the library.",
+        "solution": "位置句型結構為：'A is between B and C.'"
+      },
+      {
+        "id": 23,
+        "type": "open",
+        "section": "Lesson 4: Directions",
+        "bloom_level": "第4級（分析）",
+        "points": 8,
+        "question": "Please unscramble the sentence to give directions: \n[ straight / turn / and / corner / at / right / the / go / . / ]",
+        "answer": "Go straight and turn right at the corner.",
+        "solution": "指引路線結構為：'Go straight and turn right/left at the corner.'"
+      },
+      {
+        "id": 24,
+        "type": "open",
+        "section": "Reading Comprehension",
+        "bloom_level": "第4級（分析）",
+        "points": 8,
+        "question": "【Read the passage and answer】\n\"Neil lives in a beautiful town. There is a big park near his house. Next to the park, there is a bakery. The bakery sells yummy bread. Across from the bakery, there is a post office. Neil goes to the post office to mail cards to his friends. The library is between the bakery and the bank.\"\n\nQuestion: Where is the bakery? (Write a full sentence)",
+        "answer": "It is next to the park.",
+        "solution": "根據短文：'Next to the park, there is a bakery.' 答句應為 'It is next to the park.'"
+      },
+      {
+        "id": 25,
+        "type": "open",
+        "section": "Reading Comprehension",
+        "bloom_level": "第4級（分析）",
+        "points": 8,
+        "question": "【Read the passage and answer (continued)】\nQuestion: Where is the library? (Write a full sentence)",
+        "answer": "It is between the bakery and the bank.",
+        "solution": "根據短文：'The library is between the bakery and the bank.' 答句應為 'It is between the bakery and the bank.'"
+      }
+    ]
+  },
+  "五年級_2_自然_期末考": {
+    "school_year": "114",
+    "semester": "2",
+    "exam_number": "2",
+    "grade": "五年級",
+    "subject": "自然",
+    "scope": "南一版第二學期期末考範圍 (第三單元：動物的生活、第四單元：聲音與樂器)",
+    "total_time": 40,
+    "total_points": 100,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第1級（記憶）",
+        "points": 4,
+        "question": "聲音是由物體振動所產生的，下列哪一種介質「無法」傳播聲音？",
+        "options": {
+          "A": "空氣",
+          "B": "水",
+          "C": "鐵軌",
+          "D": "真空環境"
+        },
+        "answer": "D",
+        "solution": "聲音傳播需要介質（固體、液體、氣體均可）。真空中沒有任何介質，因此聲音無法傳播。故選D。"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "section": "第三單元：動物的生活",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "小紅觀察蝙蝠與大冠鷲，發現牠們都能在空中飛翔。請問關於牠們的分類，下列敘述何者正確？",
+        "options": {
+          "A": "兩者都是鳥類",
+          "B": "蝙蝠是胎生的哺乳類，大冠鷲是卵生的鳥類",
+          "C": "兩者都是胎生動物",
+          "D": "蝙蝠是鳥類，大冠鷲是哺乳類"
+        },
+        "answer": "B",
+        "solution": "蝙蝠雖會飛，但牠是胎生、餵母乳的哺乳類動物；大冠鷲是卵生、有羽毛的鳥類。故選B。"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "用相同大小的力敲擊鐵琴金屬片時，長度越短的金屬片會發出怎樣的聲音？",
+        "options": {
+          "A": "音調越高",
+          "B": "音調越低",
+          "C": "音量越大",
+          "D": "音量越小"
+        },
+        "answer": "A",
+        "solution": "物體越短小，振動速度越快，發出聲音的音調（頻率）就會越高。故選A。"
+      },
+      {
+        "id": 4,
+        "type": "mc",
+        "section": "第三單元：動物的生活",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "下列哪一種動物是以「偽裝」或「保護色」來避開天敵，維持生存？",
+        "options": {
+          "A": "烏賊噴墨汁",
+          "B": "枯葉蝶模擬樹葉形狀與顏色",
+          "C": "刺蝟縮成球狀",
+          "D": "蜜蜂以針螫刺天敵"
+        },
+        "answer": "B",
+        "solution": "枯葉蝶外觀極像枯落的樹葉，這屬於「偽裝」與保護色。故選B。"
+      },
+      {
+        "id": 5,
+        "type": "mc",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第3級（應用）",
+        "points": 4,
+        "question": "當我們在說話時，主要靠身體的哪一個構造振動發出聲音？",
+        "options": {
+          "A": "舌頭",
+          "B": "聲帶",
+          "C": "嘴唇",
+          "D": "牙齒"
+        },
+        "answer": "B",
+        "solution": "人類說話是靠喉嚨裡的聲帶振動，並利用口腔、舌頭進行調音。故選B。"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "section": "第三單元：動物的生活",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "下列哪一組動物全部都屬於「胎生動物」？",
+        "options": {
+          "A": "貓、狗、海豚",
+          "B": "雞、鴨、鵝",
+          "C": "青蛙、烏龜、蛇",
+          "D": "企鵝、袋鼠、無尾熊"
+        },
+        "answer": "A",
+        "solution": "貓、狗、海豚均屬於胎生哺乳類；B、C為卵生；D中企鵝為卵生。故選A。"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第1級（記憶）",
+        "points": 4,
+        "question": "為了維護聽力健康與防止噪音污染，學校教室內講話的聲音不應超過多少分貝？",
+        "options": {
+          "A": "40分貝",
+          "B": "70分貝",
+          "C": "100分貝",
+          "D": "120分貝"
+        },
+        "answer": "B",
+        "solution": "長期處於70分貝以上的噪音環境中，會對聽力與情緒造成不良影響。故選B。"
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "section": "第三單元：動物的生活",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "臺灣氣候寒冷時，下列哪一種動物需要藉由「曬太陽」或「冬眠」等行為來調整體溫？",
+        "options": {
+          "A": "臺灣獼猴",
+          "B": "臺灣黑熊",
+          "C": "蜥蜴 (變溫動物)",
+          "D": "櫻花鉤吻鮭"
+        },
+        "answer": "C",
+        "solution": "蜥蜴屬於變溫（冷血）動物，無法自動維持體溫，需要藉由外在環境（如曬太陽）來調節體溫。故選C。"
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第3級（應用）",
+        "points": 4,
+        "question": "聲音在固體、液體與氣體中的傳播速度，其快慢關係為何？",
+        "options": {
+          "A": "固體 > 液體 > 氣體",
+          "B": "氣體 > 液體 > 固體",
+          "C": "液體 > 固體 > 氣體",
+          "D": "三者一樣快"
+        },
+        "answer": "A",
+        "solution": "介質分子越緊密，聲波傳遞速度越快，故傳播速度為：固體 > 液體 > 氣體。故選A。"
+      },
+      {
+        "id": 10,
+        "type": "mc",
+        "section": "第三單元：動物的生活",
+        "bloom_level": "第3級（應用）",
+        "points": 4,
+        "question": "下列哪一種動物在寒冷的冬天裡，體溫仍然能保持恆定（恆溫動物）？",
+        "options": {
+          "A": "青蛙",
+          "B": "綠蠵龜",
+          "C": "兔子 (哺乳類)",
+          "D": "鯉魚"
+        },
+        "answer": "C",
+        "solution": "鳥類與哺乳類動物為恆溫動物，體溫能自動保持恆定；魚類、兩棲類、爬蟲類為變溫動物。故選C。"
+      },
+      {
+        "id": 11,
+        "type": "blank",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "用嘴吹塑膠管排笛，管子越短的，裡面的空氣柱越短，振動越快，發出的聲音音調越（__________）（填高或低）。",
+        "answer": "高",
+        "solution": "空氣柱越短，振動頻率越快，發出聲音的音調越高。"
+      },
+      {
+        "id": 12,
+        "type": "blank",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "敲擊鼓面時，用力敲擊的力量越大，鼓面振動的幅度越大，發出的聲音音量越（__________）（填大或小）。",
+        "answer": "大",
+        "solution": "敲擊力道大，振動幅度（振幅）大，響度（音量）就越大。"
+      },
+      {
+        "id": 13,
+        "type": "blank",
+        "section": "第三單元：動物的生活",
+        "bloom_level": "第2級（理解）",
+        "points": 5,
+        "question": "青蛙與蛇在冬天時，因為體溫會隨著環境溫度劇烈下降，因此會採取（__________）的方式來度過寒冬。",
+        "answer": "冬眠",
+        "solution": "變溫動物在冬天時會進入冬眠狀態，減少能量消耗以維持生存。"
+      },
+      {
+        "id": 14,
+        "type": "blank",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第2級（理解）",
+        "points": 5,
+        "question": "在敲擊鐵軌時，遠處的人把耳朵貼在鐵軌上，能比在空氣中更快聽到聲音，這是因為聲音在（__________）介質中的傳播速度最快。",
+        "answer": "固體",
+        "solution": "聲音在固體中的傳遞速度快於氣體（空氣）。"
+      },
+      {
+        "id": 15,
+        "type": "blank",
+        "section": "第三單元：動物的生活",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "哺乳類動物特殊的生殖方式是（__________），並在出生後以（__________）哺育幼兒。 (答案請輸入：胎生)",
+        "answer": "胎生",
+        "solution": "胎生與餵母乳是哺乳類動物的核心特徵。"
+      },
+      {
+        "id": 16,
+        "type": "blank",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第1級（記憶）",
+        "points": 5,
+        "question": "測量聲音強弱（音量大小）的單位是（__________）。",
+        "answer": "分貝",
+        "solution": "聲音強弱（響度）的測量單位是分貝 (dB)。"
+      },
+      {
+        "id": 17,
+        "type": "open",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖所示是一段聲波波形圖。\n(1) 請問吹奏粗細相同但長度不同的排笛管子，最短的管子發出聲音的音調較高。這在波形上代表頻率較快還是慢？ (3分)\n(2) 如果想要讓排笛的音量變大，吹奏力道應如何調整？這會改變波形的哪一個特性？ (4.5分)",
+        "graphic": {
+          "type": "soundWave",
+          "params": {
+            "waveType": "highFreq",
+            "label": "排笛聲波波形示意圖"
+          }
+        },
+        "answer": "頻率較快；加大吹氣力道，會使振幅變大",
+        "solution": "(1) 音調越高，代表聲波在相同時間內振動的次數越多，即頻率較快。\n(2) 音量要變大，必須用力吹氣，這會增加空氣柱振動的幅度，即改變聲波的「振幅」使之變大。"
+      },
+      {
+        "id": 18,
+        "type": "open",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖是一個簡易燈泡電路實驗。\n(1) 當開關處於如圖中拉起的狀態，此時電路是「通路」還是「斷路」？燈泡會亮嗎？ (3分)\n(2) 若將一個迴紋針（鐵製）跨接在開關兩端，燈泡亮了。如果換成塑膠尺，燈泡會亮嗎？請說明這與物質的哪種性質有關。 (4.5分)",
+        "graphic": {
+          "type": "circuit",
+          "params": {
+            "lit": false,
+            "closed": false
+          }
+        },
+        "answer": "斷路，燈泡不會亮；換成塑膠尺燈泡不會亮，因為塑膠是絕緣體",
+        "solution": "(1) 開關拉起時電路被切斷，屬於「斷路」，沒有電流通過，所以燈泡不會亮。\n(2) 換成塑膠尺燈泡不會亮。鐵製迴紋針能導電是「導體」，而塑膠尺不導電是「絕緣體」。"
+      },
+      {
+        "id": 19,
+        "type": "open",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "敲擊鐵琴金屬片實驗中：\n(1) 觀察長短不同的金屬片，敲擊哪一片會發出音調較高的聲音？這與聲音的哪一個特性有關？ (3分)\n(2) 如果用大小不同的力敲擊同一金屬片，產生的波形會有何不同？請依據示意圖說明。 (4.5分)",
+        "graphic": {
+          "type": "soundWave",
+          "params": {
+            "waveType": "highAmp",
+            "label": "重力敲擊聲波波形示意圖"
+          }
+        },
+        "answer": "較短的金屬片，與頻率有關；力道大會使振幅變大",
+        "solution": "(1) 敲擊較短的金屬片音調較高，與物體振動的「頻率」有關。\n(2) 用大力量敲擊會使聲波的「振幅」變大，在示意的波形圖上會看到波峰和波谷的高度差變大，但波的疏密（頻率）保持不變。"
+      },
+      {
+        "id": 20,
+        "type": "open",
+        "section": "第四單元：聲音與樂器",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖是一個通路燈泡電路實驗。\n(1) 電池以正極對負極的方式串聯，請問與單個電池相比，燈泡亮度會如何變化？ (3分)\n(2) 若將電池改為並聯方式連接，這對燈泡亮度和電池的使用時間各有何影響？ (4.5分)",
+        "graphic": {
+          "type": "circuit",
+          "params": {
+            "lit": true,
+            "closed": true
+          }
+        },
+        "answer": "燈泡會變亮；亮度不變，但使用時間變長",
+        "solution": "(1) 電池串聯（正極接負極）會使電壓相加，通過燈泡的電流變大，燈泡會明顯變亮。\n(2) 電池並聯（正極接正極，負極接負極）時，燈泡亮度與單個電池相同（不變），但因為是由兩個電池分擔供電，所以電池的使用壽命會變長一倍。"
+      }
+    ]
+  },
+  "五年級_2_社會_期末考": {
+    "school_year": "114",
+    "semester": "2",
+    "exam_number": "2",
+    "grade": "五年級",
+    "subject": "社會",
+    "scope": "康軒版第二學期期末考範圍 (第三單元：日治時期人民與政府的關係、第四單元：日治時期的建設、社會文化與生活的關係)",
+    "total_time": 40,
+    "total_points": 100,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "section": "第三單元：日治時期人民與政府的關係",
+        "bloom_level": "第1級（記憶）",
+        "points": 4,
+        "question": "日治時期，日本總督府在臺灣基層社會實施哪一種制度，利用居民互相連帶負責，來達到治安防範與社會控制的目的？",
+        "options": {
+          "A": "郡守制度",
+          "B": "保甲制度",
+          "C": "地方自治聯盟",
+          "D": "三段警備法"
+        },
+        "answer": "B",
+        "solution": "日治時期日本總督府實施「保甲制度」，十戶為一甲，十甲為一保，實施連坐法以控制地方治安。故選B。"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "日治時期，八田與一奉命興建哪一項重要的水利工程，使原本水源匱乏的嘉南平原變為臺灣最大的穀倉？",
+        "options": {
+          "A": "桃園大圳",
+          "B": "嘉南大圳 (烏山頭水庫)",
+          "C": "曹公圳",
+          "D": "瑠公圳"
+        },
+        "answer": "B",
+        "solution": "日治時期日籍工程師八田與一規劃興建了「嘉南大圳」與烏山頭水庫，極大改善了嘉南平原的灌溉系統。故選B。"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "section": "第三單元：日治時期人民與政府的關係",
+        "bloom_level": "第1級（記憶）",
+        "points": 4,
+        "question": "日治初期，日本總督府為了調查臺灣的土地權利、人口分布與舊有風俗，先後成立了許多調查機構。其中負責風俗習慣調查的是哪一個？",
+        "options": {
+          "A": "臨時臺灣土地調查局",
+          "B": "臨時臺灣舊慣調查會",
+          "C": "臨時臺灣戶口調查委員會",
+          "D": "臺灣總督府物價調查會"
+        },
+        "answer": "B",
+        "solution": "「臨時臺灣舊慣調查會」由民政長官後藤新平推動，專門調查臺灣當地的傳統習俗、法律慣例與社會組織。故選B。"
+      },
+      {
+        "id": 4,
+        "type": "mc",
+        "section": "第三單元：日治時期人民與政府的關係",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "日治時期，日本總督府在面對原住民族抗日事件時，主要採取哪一種高壓與懷柔並行的政策？",
+        "options": {
+          "A": "完全同化政策",
+          "B": "「理蕃」政策 (包括通電鐵絲網與隘勇線)",
+          "C": "全面放任政策",
+          "D": "地方自治與民主選舉"
+        },
+        "answer": "B",
+        "solution": "總督府對原住民實施高壓的「理蕃」政策，建立隘勇線和警力防禦，以強奪山林資源。故選B。"
+      },
+      {
+        "id": 5,
+        "type": "mc",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "林獻堂、蔣渭水等人發起的「臺灣議會設置請願運動」，其主要訴求是什麼？",
+        "options": {
+          "A": "要求日本總督府全面退出臺灣",
+          "B": "向日本帝國議會請願，在臺灣設立享有立法與預算審查權的臺灣議會",
+          "C": "要求開放臺灣人能自由前往日本就學",
+          "D": "爭取調降臺灣當地的稻米與砂糖稅率"
+        },
+        "answer": "B",
+        "solution": "臺灣議會設置請願運動是爭取臺灣人自主參政權的溫和抗爭運動，訴求設立臺灣議會。故選B。"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "section": "第三單元：日治時期人民與政府的關係",
+        "bloom_level": "第3級（應用）",
+        "points": 4,
+        "question": "日治時期具有龐大權力的行政長官是誰？他擁有行政、立法、司法與軍事等大權。",
+        "options": {
+          "A": "臺灣省主席",
+          "B": "臺灣總督",
+          "C": "民政長官",
+          "D": "日本首相"
+        },
+        "answer": "B",
+        "solution": "「臺灣總督」是日本在臺灣的最高統治者，集所有行政、立法與司法大權於一身。故選B。"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "日本總督府引進西方的一星期七天制度，並積極宣導守時習慣。這是為了培養臺灣人什麼樣的現代生活習慣？",
+        "options": {
+          "A": "尊師重道",
+          "B": "按時作息與守時信用",
+          "C": "勤儉建國",
+          "D": "身體鍛鍊"
+        },
+        "answer": "B",
+        "solution": "引進星期制與時間觀念是為了適應現代工業化社會的運作，培養守時與按時作息的習慣。故選B。"
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "section": "第四單元：日治時期的社會文化與生活",
+        "bloom_level": "第2級（理解）",
+        "points": 4,
+        "question": "日治時期推動的「三項陋習改革」中，不包含下列哪一項？",
+        "options": {
+          "A": "吸食鴉片",
+          "B": "婦女纏足 (放足)",
+          "C": "男子留辮子 (斷髮)",
+          "D": "端午節划龍舟"
+        },
+        "answer": "D",
+        "solution": "日治時期總督府致力改進的三大陋習為：吸食鴉片、纏足（放足）與留辮子（斷髮）。端午划龍舟為傳統民俗，不在此列。故選D。"
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第1級（記憶）",
+        "points": 4,
+        "question": "日治時期，被譽為「蓬萊米之父」的日本學者是誰？他改良了臺灣稻米品種，使其適合日本人的口味。",
+        "options": {
+          "A": "八田與一",
+          "B": "磯永吉",
+          "C": "後藤新平",
+          "D": "新渡戶稻造"
+        },
+        "answer": "B",
+        "solution": "日籍學者磯永吉在臺灣成功培育出蓬萊米，因此被尊稱為「蓬萊米之父」。故選B。"
+      },
+      {
+        "id": 10,
+        "type": "mc",
+        "section": "第四單元：日治時期的社會文化與生活",
+        "bloom_level": "第3級（應用）",
+        "points": 4,
+        "question": "日治時期推廣新式教育，臺灣第一所現代女子學校是哪一所？這改變了傳統「女子無才便是德」的社會觀念。",
+        "options": {
+          "A": "臺北第一高女 (現北一女中)",
+          "B": "臺北第三高女 (現中山女高)",
+          "C": "彰化女中",
+          "D": "淡水女學校"
+        },
+        "answer": "B",
+        "solution": "「台北第三高等女學校」（今台北市立中山女中）是日治時期專為臺灣人女子設立的第一所中等學校。故選B。"
+      },
+      {
+        "id": 11,
+        "type": "blank",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "日治時期日本總督府於 1921 年起，將每年的 6 月 10 日訂為（__________）紀念日，宣導人民守時精神。",
+        "answer": "時的",
+        "solution": "日本總督府將 6 月 10 日定為「時的紀念日」（時間紀念日），宣導守時守信觀念。"
+      },
+      {
+        "id": 12,
+        "type": "blank",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "八田與一規劃興建了（__________）大圳，包含烏山頭水庫，使嘉南平原良田萬頃。",
+        "answer": "嘉南",
+        "solution": "八田與一奉命建造了嘉南大圳與烏山頭水庫，被譽為嘉南大圳之父。"
+      },
+      {
+        "id": 13,
+        "type": "blank",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第2級（理解）",
+        "points": 5,
+        "question": "林獻堂與蔣渭水於 1921 年創立了臺灣（__________）協會，透過發行報紙、舉辦講演等活動，啟迪臺灣人的文化與民族意識。",
+        "answer": "文化",
+        "solution": "蔣渭水等人成立了「臺灣文化協會」，是日治時期最重要的文化啟蒙團體。"
+      },
+      {
+        "id": 14,
+        "type": "blank",
+        "section": "第三單元：日治時期人民與政府的關係",
+        "bloom_level": "第3級（應用）",
+        "points": 5,
+        "question": "日治時期，除了總督府官員外，基層人民生活中接觸最深、權力最大，甚至被臺灣人稱為「大人」的基層官員是（__________）。",
+        "answer": "警察",
+        "solution": "日治時期的警察管轄極廣，權力極大，臺灣人尊稱其為「大人」。"
+      },
+      {
+        "id": 15,
+        "type": "blank",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第1級（記憶）",
+        "points": 5,
+        "question": "日治時期，總督府在 1908 年完成了北起基隆、南至打狗（高雄）的臺灣（__________）鐵路，對臺灣南北交通帶來歷史性變革。",
+        "answer": "縱貫",
+        "solution": "1908 年通車的「縱貫鐵路」全長四百多公里，使南北兩地可在一天之內往返。"
+      },
+      {
+        "id": 16,
+        "type": "blank",
+        "section": "第三單元：日治時期人民與政府的關係",
+        "bloom_level": "第2級（理解）",
+        "points": 5,
+        "question": "日治時期的保甲制度中，如果有保甲內的人犯法，同保甲的人都會受到處罰，這種制度稱為（__________）責任。",
+        "answer": "連帶",
+        "solution": "保甲制度實施連坐法，一人犯罪，保甲內所有人需負擔連帶責任。"
+      },
+      {
+        "id": 17,
+        "type": "open",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖是臺灣縱貫鐵路與兩大重要港口示意圖。\n(1) 臺灣縱貫鐵路全線通車是在哪一年？這條鐵路的通車對當時臺灣南北交流帶來什麼關鍵影響？ (3分)\n(2) 圖中北部的 A 代表基隆港，南部的 B 代表高雄港。請說明總督府為什麼要极力擴建與整修這兩個港口？ (4.5分)",
+        "graphic": {
+          "type": "taiwanMap",
+          "params": {
+            "spots": [
+              {
+                "x": 92,
+                "y": 28,
+                "label": "A (基隆)"
+              },
+              {
+                "x": 68,
+                "y": 145,
+                "label": "B (高雄)"
+              }
+            ],
+            "title": "縱貫鐵路與南北港口位置圖"
+          }
+        },
+        "answer": "1908年，縮短南北時空距離；為了便利稻米、砂糖等物資出口到日本",
+        "solution": "(1) 縱貫鐵路於 1908 年全線通車。它打破了南北地理阻隔，使南北兩地交通可在一天之內完成，加速了人流與物流的運作。\n(2) 基隆港與高雄港是臺灣對外貿易的樞紐。總督府擴建港口是為了將臺灣生產的蔗糖、稻米、樟腦等資源更大量、迅速地運回日本母國，並輸入日本的工業製品。"
+      },
+      {
+        "id": 18,
+        "type": "open",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖，是日治中期臺灣產業人口結構比例圖。\n(1) 根據圓餅圖，哪一個產業的從業人口比例最高？這反映出當時總督府對臺灣採取什麼樣的經濟定位？ (3分)\n(2) 到了日治後期，因為中日戰爭與二次大戰爆發，總督府將原本的經濟政策調整為何？這對臺灣的工業有何影響？ (4.5分)",
+        "graphic": {
+          "type": "pieChart",
+          "params": {
+            "labels": [
+              "農業 (55%)",
+              "工業 (20%)",
+              "服務業 (25%)"
+            ]
+          }
+        },
+        "answer": "農業最高，工業日本農業台灣；轉為工業台灣農業南洋，帶動軍需工業發展",
+        "solution": "(1) 農業人口（55%）比例最高。反映出日治前半期總督府實施「工業日本，農業臺灣」的定位，將臺灣作為日本的糧食與原料供應地。\n(2) 日治後期，總督府為配合「南進政策」，將政策調整為「工業臺灣，農業南洋」，在臺灣大力發展電力、化學、金屬等軍需工業，使臺灣產業開始向輕重工業轉型。"
+      },
+      {
+        "id": 19,
+        "type": "open",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖，是日月潭水力發電所的位置圖。\n(1) 日月潭水力發電工程是在哪一個時期興建？在當時的亞洲地位如何？ (3分)\n(2) 這項發電工程的完工，為當時臺灣的產業轉型帶來了什麼關鍵的改變？ (4.5分)",
+        "graphic": {
+          "type": "taiwanMap",
+          "params": {
+            "spots": [
+              {
+                "x": 84,
+                "y": 96,
+                "label": "日月潭"
+              }
+            ],
+            "title": "日月潭水力發電所位置圖"
+          }
+        },
+        "answer": "日治時期，是當時亞洲最大的發電廠；提供了充足電力，促使臺灣從農業轉向工業發展",
+        "solution": "(1) 日月潭水力發電廠於日治時期（1934年）完工。它是當時臺灣乃至亞洲發電量最大的水力發電廠。\n(2) 充足且廉價的電力供應，為臺灣提供了現代工業發展的動力，推動了煉鋁、金屬、化學等重工業的興起，促使臺灣產業結構從傳統農業轉型為現代工業。"
+      },
+      {
+        "id": 20,
+        "type": "open",
+        "section": "第四單元：日治時期的建設",
+        "bloom_level": "第4級（分析）",
+        "points": 7.5,
+        "question": "如下圖，是日治時期小學就學率與教育分配示意圖。\n(1) 當時總督府將臺灣人子弟與日本人子弟分開就讀不同的學校，其名稱分別是什麼？ (3分)\n(2) 這種教育制度上的差別待遇與資源不平等，對後來的臺灣知識份子產生了什麼影響？ (4.5分)",
+        "graphic": {
+          "type": "pieChart",
+          "params": {
+            "labels": [
+              "公學校 (台籍)",
+              "小學校 (日籍)",
+              "其他 (5%)"
+            ]
+          }
+        },
+        "answer": "台籍公學校、日籍小學校；促使知識份子發起爭取教育平權與社會改革運動",
+        "solution": "(1) 日本人子弟就讀師資與設備較優良的「小學校」；臺灣本地人子弟則就讀「公學校」，兩者在教材與升學機會上有極大差別。\n(2) 教育資源的嚴重不平等，讓臺灣人意識到二等公民的處境，促使留學日本的臺灣青年與知識份子回臺後發起諸多政治與社會運動（如要求撤銷差別待遇、設立男女平權學校等），成為日治中後期抗爭的重要力量。"
+      }
+    ]
+  }
+}
