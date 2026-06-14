@@ -933,11 +933,11 @@ function App() {
     if (settings.googleScriptUrl) {
       try {
         const subjName = subject === "math" ? "數學" : subject === "chinese" ? "國語" : subject === "english" ? "英語" : subject === "science" ? "自然" : "社會";
-        await fetch("/api/log-error", {
+        await fetch(settings.googleScriptUrl, {
           method: "POST",
+          mode: "no-cors", // Use no-cors mode to completely bypass CORS preflight blocks from browser
           headers: { 
-            "Content-Type": "application/json",
-            "x-google-script-url": settings.googleScriptUrl
+            "Content-Type": "text/plain;charset=utf-8"
           },
           body: JSON.stringify({
             studentName: studentName,
