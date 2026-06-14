@@ -583,7 +583,7 @@ function App() {
   };
 
   // --- Client-side Gemini API generation helpers ---
-  const callGeminiDirectly = async (apiKey, prompt, retries = 3, delayMs = 1500) => {
+  const callGeminiDirectly = async (apiKey, prompt, retries = 5, delayMs = 2000) => {
     const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
     for (let i = 0; i < retries; i++) {
       try {
