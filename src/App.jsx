@@ -585,6 +585,7 @@ function App() {
   // --- Client-side Gemini API generation helpers ---
   const callGeminiDirectly = async (apiKey, prompt, retries = 5, delayMs = 2000) => {
     const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+    let lastErrorMsg = "Unknown error";
     for (let i = 0; i < retries; i++) {
       try {
         const response = await fetch(geminiUrl, {
@@ -603,6 +604,7 @@ function App() {
 
         if (response.status === 429) {
           const errorText = await response.text();
+          lastErrorMsg = `Google API 頻率限制 (429): ${errorText}`;
           let retryAfterMs = delayMs;
           try {
             const errJson = JSON.parse(errorText);
@@ -622,24 +624,27 @@ function App() {
 
         if (!response.ok) {
           const errorText = await response.text();
+          lastErrorMsg = `Gemini API error: ${errorText}`;
           throw new Error(`Gemini API error: ${errorText}`);
         }
 
         const data = await response.json();
         const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
         if (!text) {
+          lastErrorMsg = "Empty response from Gemini";
           throw new Error("Empty response from Gemini");
         }
 
         return JSON.parse(text.trim());
       } catch (error) {
+        lastErrorMsg = error.message || String(error);
         if (i === retries - 1) throw error;
         console.warn(`[callGemini] Error: ${error.message}. Retrying in ${delayMs}ms...`);
         await new Promise(resolve => setTimeout(resolve, delayMs));
         delayMs *= 2;
       }
     }
-    throw new Error("Failed to call Gemini after multiple retries");
+    throw new Error(`連線失敗 (已重試 ${retries} 次)。最後錯誤：${lastErrorMsg}`);
   };
 
   const getMcPromptDetails = (subject, count) => {
@@ -815,7 +820,7 @@ function App() {
         return;
       } catch (err) {
         const errMsg = err.message || String(err);
-        const isRateLimit = errMsg.includes("429") || errMsg.includes("retries") || errMsg.includes("頻率限制");
+        const isRateLimit = errMsg.includes("429") || errMsg.includes("RESOURCE_EXHAUSTED") || errMsg.includes("頻率限制");
         if (isRateLimit) {
           alert(`⚠️ Gemini AI 命題系統忙碌中 (頻率限制 429)\n\nGoogle API 的每分鐘呼叫次數已達上限。請點擊「確定」，系統會先為您載入內建試卷；若您仍想產生新題目，請等待約 30 秒後重新整理網頁並再試一次！`);
         } else {
