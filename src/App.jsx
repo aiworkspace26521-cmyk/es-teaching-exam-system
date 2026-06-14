@@ -512,7 +512,7 @@ function App() {
   // Settings state (Gemini, Google Sheets)
   const [settings, setSettings] = useState({
     geminiApiKey: localStorage.getItem("es_exam_gemini_api_key") || "",
-    googleScriptUrl: localStorage.getItem("es_exam_google_script_url") || ""
+    googleScriptUrl: localStorage.getItem("es_exam_google_script_url") || "https://script.google.com/macros/s/AKfycbyktbvfQKxCRoRmOuy8jvNomVTuHH41Ltxo9CDtFV53XGIrI1yPJK3BEFzur8COXXKNwA/exec"
   });
   const [settingsModalOpen, setSettingsModalOpen] = useState(false);
   
