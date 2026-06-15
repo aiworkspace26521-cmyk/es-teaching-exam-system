@@ -647,46 +647,90 @@ function App() {
     throw new Error(`連線失敗 (已重試 ${retries} 次)。最後錯誤：${lastErrorMsg}`);
   };
 
-  const getMcPromptDetails = (subject, count) => {
-    if (subject === "數學") {
-      return `\n請生成 ${count} 題選擇題 (mc)，每題 5 分。\n規則：\n- 四選一，必須提供完整 A, B, C, D 選項。正確選項必須儘量平均分佈，且嚴格禁止連續兩題答案相同。\n- 認知層次：包含記憶 (第1級)、理解 (第2級)、應用/分析 (第3-4級)。\n- 請確保題目中數字合理、可整除。在題目文字中，若有數學符號（如分數、平方或根號），使用大括號 {} 標記，例如 {frac(3,4)} 代表 3/4 分數，{x^2} 代表平方。\n- ⚠️必須包含至少 1 題具有 "graphic" 欄位以利前端渲染。圖形題類型：\n  - 長方體表面積："graphic": { "type": "prism", "params": { "length": "10cm", "width": "6cm", "height": "5cm" } }\n  - 正方體表面積："graphic": { "type": "cube", "params": { "edge": "8cm" } }\n  - 折線圖讀圖題："graphic": { "type": "lineChart", "params": {} }\n  - 定價與折扣應用題："graphic": { "type": "tag", "params": { "price": "1200" } }\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "mc",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 5,\n      "question": "題目文字",\n      "options": { "A": "選項A", "B": "選項B", "C": "選項C", "D": "選項D" },\n      "answer": "A",\n      "solution": "極簡解析",\n      "graphic": { "type": "prism", "params": { "length": "10cm", "width": "6cm", "height": "5cm" } } // 選填\n    }\n  ]\n}\n`;
-    } else if (subject === "國語") {
-      return `\n請生成 ${count} 題選擇題 (mc)，每題 3 分。\n規則：\n- 包含字音字形辨析、詞義理解、修辭判定。四選一，必須有完整 A, B, C, D，正確答案儘量均勻分佈，嚴格禁止連續兩題答案相同。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "mc",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 3,\n      "question": "題目文字",\n      "options": { "A": "選項A", "B": "選項B", "C": "選項C", "D": "選項D" },\n      "answer": "A",\n      "solution": "極簡解析"\n    }\n  ]\n}\n`;
-    } else if (subject === "英語") {
-      return `\n請生成 ${count} 題選擇題 (mc)，每題 2 分。\n規則：\n- 包含發音辨析 (phonics)、字彙 (vocabulary)、文法 (grammar)、日常對話 (dialogue) 等類型。四選一，答案分佈平衡，嚴格禁止連續兩題答案相同。\n- 若題目是有關於社區場所 (hospital, post office, bakery)，可以加上對應的 "graphic" 欄位，例如： "graphic": { "type": "hospital", "params": {} }\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "mc",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 2,\n      "question": "題目文字",\n      "options": { "A": "選項A", "B": "選項B", "C": "選項C", "D": "選項D" },\n      "answer": "A",\n      "solution": "極簡解析",\n      "graphic": { "type": "hospital", "params": {} } // 選填\n    }\n  ]\n}\n`;
-    } else if (subject === "自然") {
-      return `\n請生成 ${count} 題選擇題 (mc)，每題 4 分。\n規則：\n- 基礎概念判定、實驗數據與控制變因。四選一，答案分佈平衡，嚴格禁止連續兩題答案相同。\n- 若題目是有關於聲音或電路/實驗，可加上對應的 "graphic" 欄位，例如： "graphic": { "type": "circuit", "params": { "lit": true, "closed": true } }\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "mc",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 4,\n      "question": "題目文字",\n      "options": { "A": "選項A", "B": "選項B", "C": "選項C", "D": "選項D" },\n      "answer": "A",\n      "solution": "極簡解析",\n      "graphic": { "type": "circuit", "params": { "lit": true, "closed": true } } // 選填\n    }\n  ]\n}\n`;
-    } else { // 社會
-      return `\n請生成 ${count} 題選擇題 (mc)，每題 4 分。\n規則：\n- 歷史事件、地理環境、公民民主與法律常識。四選一，答案分佈平衡，嚴格禁止連續兩題答案相同。\n- 若題目是有關於臺灣地理/位置/圓餅統計圖，可加上對應的 "graphic" 欄位，例如： "graphic": { "type": "taiwanMap", "params": { "spots": [{"x": 90, "y": 40, "label": "台北地區"}], "title": "台灣地圖位置判讀" } }\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "mc",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 4,\n      "question": "題目文字",\n      "options": { "A": "選項A", "B": "選項B", "C": "選項C", "D": "選項D" },\n      "answer": "A",\n      "solution": "極簡解析",\n      "graphic": { "type": "taiwanMap", "params": { "spots": [{"x": 90, "y": 40, "label": "台北地區"}], "title": "台灣地圖位置判讀" } } // 選填\n    }\n  ]\n}\n`;
-    }
-  };
+  const getUnifiedPromptDetails = (subject, mcCount, mcPoints, blankCount, blankPoints, openCount, openPoints) => {
+    let mcRules = "";
+    let blankRules = "";
+    let openRules = "";
 
-  const getBlankPromptDetails = (subject, count) => {
     if (subject === "數學") {
-      return `\n請生成 ${count} 題填充題 (blank)，每題 5 分。\n規則：\n- 答案需簡短明確 (數字或特定名稱)。\n- 若有數學符號（如分數、平方或根號），使用大括號 {} 標記，例如 {frac(3,4)} 代表 3/4 分數，{x^2} 代表平方。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "blank",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 5,\n      "question": "題目文字（以 ______ 標示填空處）",\n      "answer": "答案內容",\n      "solution": "極簡解析"\n    }\n  ]\n}\n`;
+      mcRules = `- 選擇題需要包含至少 1 題具有 "graphic" 欄位以利前端渲染。圖形題類型：\n  - 長方體表面積："graphic": { "type": "prism", "params": { "length": "10cm", "width": "6cm", "height": "5cm" } }\n  - 正方體表面積："graphic": { "type": "cube", "params": { "edge": "8cm" } }\n  - 折線圖讀圖題："graphic": { "type": "lineChart", "params": {} }\n  - 定價與折扣應用題："graphic": { "type": "tag", "params": { "price": "1200" } }`;
+      blankRules = `- 答案需簡短明確 (數字或特定名稱)。\n- 若有數學符號（如分數、平方或根號），使用大括號 {} 標記，例如 {frac(3,4)} 代表 3/4 分數，{x^2} 代表平方。`;
+      openRules = `- 每一題必須拆分為兩個子題 (1) 佔 3 分，(2) 佔 4.5 分。\n- ⚠️必須包含至少 1 題具有 "graphic" 欄位以利前端渲染。圖形題類型：\n  - 長方體表面積："graphic": { "type": "prism", "params": { "length": "10cm", "width": "6cm", "height": "5cm" } }\n  - 正方體表面積："graphic": { "type": "cube", "params": { "edge": "8cm" } }\n  - 定價與折扣應用題："graphic": { "type": "tag", "params": { "price": "4500" } }\n  - 長方體倉庫四周油漆題："graphic": { "type": "warehouse", "params": { "length": "12m", "width": "8m", "height": "4m" } }`;
     } else if (subject === "國語") {
-      return `\n請生成 ${count} 題填充題 (blank)，每題 5 分。\n規則：\n- 代表國字注音與改錯字。例如：「在繁複的功課壓力下，我們依然要保持開朗的心境，不要因為挫折而自爆自棄。」錯字為（ 爆 ），應改正為（ 暴 ）。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "blank",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 5,\n      "question": "題目文字（以 ______ 標示填空處，或寫出錯字及改正的敘述）",\n      "answer": "答案內容",\n      "solution": "極簡解析"\n    }\n  ]\n}\n`;
+      mcRules = `- 包含字音字形辨析、詞義理解、修辭判定。`;
+      blankRules = `- 代表國字注音與改錯字。例如：「在繁複的功課壓力下，我們依然要保持開朗的心境，不要因為挫折而自爆自棄。」錯字為（ 爆 ），應改正為（ 暴 ）。`;
+      openRules = `- 代表閱讀測驗。你必須在第一題前面附加一篇 150-300 字的繁體中文白話文故事（並在文字中明顯標記為「閱讀測驗文章：[文章內容]」），然後針對該文章內容設計簡答題/理解題，讓學生寫出思考解析。`;
     } else if (subject === "英語") {
-      return `\n請生成 ${count} 題填充題 (blank)，每題 6 分。\n規則：\n- 看圖填單字題型。請以文字描述情境代替圖片，例如：「(Look at the picture: a girl is studying in the study room) Where is she? She is in the s_ _ _ _ (blank answer: study)」。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "blank",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 6,\n      "question": "題目文字（以文字描述圖片情境，並以底線或提示字元標示填空處，例如 s_ _ _ _）",\n      "answer": "答案內容",\n      "solution": "極簡解析"\n    }\n  ]\n}\n`;
+      mcRules = `- 包含發音辨析 (phonics)、字彙 (vocabulary)、文法 (grammar)、日常對話 (dialogue) 等類型。\n- 若題目是有關於社區場所 (hospital, post office, bakery)，可以加上對應的 "graphic" 欄位，例如： "graphic": { "type": "hospital", "params": {} }`;
+      blankRules = `- 看圖填單字題型。請以文字描述情境代替圖片，例如：「(Look at the picture: a girl is studying in the study room) Where is she? She is in the s_ _ _ _ (blank answer: study)」。`;
+      openRules = `- 包含句型重組 (Sentence Unscramble) 或閱讀測驗引導簡答（若為閱讀測驗，請附上一篇 50-100 字簡單英文短文，並提出問答題）。`;
     } else if (subject === "自然") {
-      return `\n請生成 ${count} 題填充題 (blank)，每題 5 分。\n規則：\n- 器材名稱填寫、實驗變因分類或填空。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "blank",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 5,\n      "question": "題目文字（以 ______ 標示填空處）",\n      "answer": "答案內容",\n      "solution": "極簡解析"\n    }\n  ]\n}\n`;
+      mcRules = `- 基礎概念判定、實驗數據與控制變因。\n- 若題目是有關於聲音或電路/實驗，可加上對應的 "graphic" 欄位，例如： "graphic": { "type": "circuit", "params": { "lit": true, "closed": true } }`;
+      blankRules = `- 器材名稱填寫、實驗變因分類或填空。`;
+      openRules = `- 代表實驗申論題。每一題必須包含 (1) 佔 3 分，(2) 佔 4.5 分。涉及具體實驗情境（如：熱對流、空氣與燃燒、防鏽實驗等）。`;
     } else { // 社會
-      return `\n請生成 ${count} 題配合/填充題 (blank)，每題 5 分。\n規則：\n- 人物與事蹟配合、地方政府職責填寫。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "blank",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 5,\n      "question": "題目文字（以 ______ 標示填空處，或設計人物/事蹟配合題的描述）",\n      "answer": "答案內容",\n      "solution": "極簡解析"\n    }\n  ]\n}\n`;
+      mcRules = `- 歷史事件、地理環境、公民民主與法律常識。\n- 若題目是有關於臺灣地理/位置/圓餅統計圖，可加上對應的 "graphic" 欄位，例如： "graphic": { "type": "taiwanMap", "params": { "spots": [{"x": 90, "y": 40, "label": "台北地區"}], "title": "台灣地圖位置判讀" } }`;
+      blankRules = `- 人物與事蹟配合、地方政府職責填寫。`;
+      openRules = `- 地圖判讀與統計圖表題。每一題必須包含 (1) 佔 3 分，(2) 佔 4.5 分。例如：讀取經緯度、人口統計圖、臺灣水資源分配圖等。\n- 若題目是有關於臺灣地理/位置，可加上對應的 "graphic" 欄位，例如 "graphic": { "type": "pieChart", "params": { "labels": ["農業", "工業", "服務業"] } }`;
     }
-  };
 
-  const getOpenPromptDetails = (subject, count) => {
-    if (subject === "數學") {
-      return `\n請生成 ${count} 題應用題 (open)，每題 7.5 分。\n規則：\n- 每一題必須拆分為兩個子題 (1) 佔 3 分，(2) 佔 4.5 分。\n- 在題目文字中，若有數學符號（如分數、平方或根號），使用大括號 {} 標記。\n- ⚠️必須包含至少 1 題具有 "graphic" 欄位以利前端渲染。圖形題類型：\n  - 長方體表面積："graphic": { "type": "prism", "params": { "length": "10cm", "width": "6cm", "height": "5cm" } }\n  - 正方體表面積："graphic": { "type": "cube", "params": { "edge": "8cm" } }\n  - 定價與折扣應用題："graphic": { "type": "tag", "params": { "price": "4500" } }\n  - 長方體倉庫四周油漆題："graphic": { "type": "warehouse", "params": { "length": "12m", "width": "8m", "height": "4m" } }\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "open",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 7.5,\n      "question": "應用題/簡答題題目，包含 (1) 子題和 (2) 子題的敘述與配分",\n      "answer": "簡短標準答案",\n      "solution": "極簡解析與計算步驟",\n      "graphic": { "type": "warehouse", "params": { "length": "12m", "width": "8m", "height": "4m" } } // 選填\n    }\n  ]\n}\n`;
-    } else if (subject === "國語") {
-      return `\n請生成 ${count} 題非選擇題 (open)，每題 10 分。\n規則：\n- 代表閱讀測驗。你必須在第一題前面附加一篇 150-300 字的繁體中文白話文故事（並在文字中明顯標記為「閱讀測驗文章：[文章內容]」），然後針對該文章內容設計 ${count} 題簡答題/理解題，讓學生寫出思考解析。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "open",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 10,\n      "question": "題目內容（第 1 題必須附上閱讀測驗文章，例如：閱讀測驗文章：[文章] ... \\n\\n 題目：請問...）",\n      "answer": "簡短標準答案",\n      "solution": "極簡解析"\n    }\n  ]\n}\n`;
-    } else if (subject === "英語") {
-      return `\n請生成 ${count} 題非選擇題 (open)，每題 8 分。\n規則：\n- 包含句型重組 (Sentence Unscramble) 或閱讀測驗引導簡答（若為閱讀測驗，請附上一篇 50-100 字簡單英文短文，並提出問答題）。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "open",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 8,\n      "question": "題目內容（如重組題目「is / She / study / in / study room / the .」，或英文短文與閱讀問答題）",\n      "answer": "正確英文句子或簡答",\n      "solution": "極簡解析"\n    }\n  ]\n}\n`;
-    } else if (subject === "自然") {
-      return `\n請生成 ${count} 題應用/非選擇題 (open)，每題 7.5 分。\n規則：\n- 代表實驗申論題。每一題必須包含 (1) 佔 3 分，(2) 佔 4.5 分。涉及具體實驗情境（如：熱對流、空氣與燃燒、防鏽實驗等）。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "open",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 7.5,\n      "question": "實驗題目，包含 (1) 子題和 (2) 子題的敘述與配分",\n      "answer": "簡短答案",\n      "solution": "極簡解析"\n    }\n  ]\n}\n`;
-    } else { // 社會
-      return `\n請生成 ${count} 題非選擇/簡答題 (open)，每題 7.5 分。\n規則：\n- 地圖判讀與統計圖表題。每一題必須包含 (1) 佔 3 分，(2) 佔 4.5 分。例如：讀取經緯度、人口統計圖、臺灣水資源分配圖等。\n- 若題目是有關於臺灣地理/位置，可加上對應的 "graphic" 欄位。\n\n回傳格式 JSON Schema：\n{\n  "questions": [\n    {\n      "type": "open",\n      "section": "單元名稱",\n      "bloom_level": "認知層次",\n      "points": 7.5,\n      "question": "題目內容，包含 (1) 子題 and (2) 子題的敘述與配分",\n      "answer": "簡短答案",\n      "solution": "極簡解析",\n      "graphic": { "type": "pieChart", "params": { "labels": ["農業", "工業", "服務業"] } } // 選填\n    }\n  ]\n}\n`;
+    return `
+請同時生成以下三種類型的考題，並將它們分別放入對應的 JSON 陣列中：
+
+1. 選擇題 (mc_questions)：生成 ${mcCount} 題，每題 ${mcPoints} 分。
+   - 規則：四選一，必須提供完整 A, B, C, D 選項。正確選項必須儘量平均分佈，且嚴格禁止連續兩題答案相同。
+   - 認知層次：包含記憶 (第1級)、理解 (第2級)、應用/分析 (第3-4級)。
+   - 請確保題目中數字合理、可整除。在題目文字中，若有數學符號（如分數、平方或根號），使用大括號 {} 標記，例如 {frac(3,4)} 代表 3/4 分數，{x^2} 代表平方。
+   ${mcRules}
+
+2. 填充題 (blank_questions)：生成 ${blankCount} 題，每題 ${blankPoints} 分。
+   - 規則：答案需簡短明確 (數字或特定名稱)。若有數學符號使用大括號 {} 標記。
+   ${blankRules}
+
+3. 非選擇題/應用題 (open_questions)：生成 ${openCount} 題，每題 ${openPoints} 分。
+   - 規則：解答需有詳細解題過程與步驟說明。若有數學符號使用大括號 {} 標記。
+   ${openRules}
+
+回傳格式 JSON Schema：
+{
+  "mc_questions": [
+    {
+      "type": "mc",
+      "section": "單元名稱",
+      "bloom_level": "認知層次",
+      "points": ${mcPoints},
+      "question": "題目文字",
+      "options": { "A": "選項A", "B": "選項B", "C": "選項C", "D": "選項D" },
+      "answer": "正確答案字母(A/B/C/D)",
+      "solution": "極簡解析(20字以內)",
+      "graphic": null
     }
+  ],
+  "blank_questions": [
+    {
+      "type": "blank",
+      "section": "單元名稱",
+      "bloom_level": "認知層次",
+      "points": ${blankPoints},
+      "question": "題目文字（以 ______ 標示填空處）",
+      "answer": "正確答案文字",
+      "solution": "極簡解析(20字以內)"
+    }
+  ],
+  "open_questions": [
+    {
+      "type": "open",
+      "section": "單元名稱",
+      "bloom_level": "認知層次",
+      "points": ${openPoints},
+      "question": "題目文字",
+      "answer": "正確答案文字",
+      "solution": "詳細解析與計算步驟(20字以內)",
+      "graphic": null
+    }
+  ]
+}
+`;
   };
 
   // Load or Generate Exam
@@ -747,59 +791,49 @@ function App() {
 `;
 
         // Decide question counts for each part
-        let mcCount = 10;
-        let blankCount = 6;
-        let openCount = 4;
+        let mcCount = 10; let mcPoints = 4;
+        let blankCount = 6; let blankPoints = 5;
+        let openCount = 4; let openPoints = 7.5;
 
         if (subjName === "數學") {
-          mcCount = 8; blankCount = 6; openCount = 4;
+          mcCount = 8; mcPoints = 5;
+          blankCount = 6; blankPoints = 5;
+          openCount = 4; openPoints = 7.5;
         } else if (subjName === "國語") {
-          mcCount = 10; blankCount = 6; openCount = 4;
+          mcCount = 10; mcPoints = 3;
+          blankCount = 6; blankPoints = 5;
+          openCount = 4; openPoints = 10;
         } else if (subjName === "英語") {
-          mcCount = 15; blankCount = 5; openCount = 5;
+          mcCount = 15; mcPoints = 2;
+          blankCount = 5; blankPoints = 6;
+          openCount = 5; openPoints = 8;
         } else if (subjName === "自然") {
-          mcCount = 10; blankCount = 6; openCount = 4;
+          mcCount = 10; mcPoints = 4;
+          blankCount = 6; blankPoints = 5;
+          openCount = 4; openPoints = 7.5;
         } else if (subjName === "社會") {
-          mcCount = 10; blankCount = 6; openCount = 4;
+          mcCount = 10; mcPoints = 4;
+          blankCount = 6; blankPoints = 5;
+          openCount = 4; openPoints = 7.5;
         }
 
-        const mcPrompt = commonHeader + getMcPromptDetails(subjName, mcCount);
-        const blankPrompt = commonHeader + getBlankPromptDetails(subjName, blankCount);
-        const openPrompt = commonHeader + getOpenPromptDetails(subjName, openCount);
+        const unifiedPrompt = commonHeader + getUnifiedPromptDetails(subjName, mcCount, mcPoints, blankCount, blankPoints, openCount, openPoints);
 
-        let isCancelled = false;
-        const callWithDelay = async (prompt, delay) => {
-          if (delay > 0) {
-            await new Promise(resolve => setTimeout(resolve, delay));
-          }
-          if (isCancelled) {
-            throw new Error("Request cancelled due to previous failure");
-          }
-          try {
-            return await callGeminiDirectly(settings.geminiApiKey, prompt);
-          } catch (err) {
-            isCancelled = true;
-            throw err;
-          }
-        };
-
-        const [mcData, blankData, openData] = await Promise.all([
-          callWithDelay(mcPrompt, 0),
-          callWithDelay(blankPrompt, 800),
-          callWithDelay(openPrompt, 1600)
-        ]);
+        const examData = await callGeminiDirectly(settings.geminiApiKey, unifiedPrompt);
 
         const questions = [];
         let currentId = 1;
 
-        if (mcData && Array.isArray(mcData.questions)) {
-          mcData.questions.forEach((q) => { q.id = currentId++; questions.push(q); });
-        }
-        if (blankData && Array.isArray(blankData.questions)) {
-          blankData.questions.forEach((q) => { q.id = currentId++; questions.push(q); });
-        }
-        if (openData && Array.isArray(openData.questions)) {
-          openData.questions.forEach((q) => { q.id = currentId++; questions.push(q); });
+        if (examData) {
+          if (Array.isArray(examData.mc_questions)) {
+            examData.mc_questions.forEach((q) => { q.id = currentId++; questions.push(q); });
+          }
+          if (Array.isArray(examData.blank_questions)) {
+            examData.blank_questions.forEach((q) => { q.id = currentId++; questions.push(q); });
+          }
+          if (Array.isArray(examData.open_questions)) {
+            examData.open_questions.forEach((q) => { q.id = currentId++; questions.push(q); });
+          }
         }
 
         const parsedExam = {
