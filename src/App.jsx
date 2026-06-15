@@ -1192,11 +1192,14 @@ function App() {
           </button>
           {currentScreen !== "dashboard" && (
             <button className="btn btn-danger" onClick={() => {
-              if (confirm("確定要返回首頁嗎？當前測驗將不會被保存。")) {
-                if (timerRef.current) clearInterval(timerRef.current);
-                setCurrentScreen("dashboard");
-                setStudentName("");
+              if (currentScreen === "exam") {
+                if (!confirm("確定要返回首頁嗎？當前測驗將不會被保存。")) {
+                  return;
+                }
               }
+              if (timerRef.current) clearInterval(timerRef.current);
+              setCurrentScreen("dashboard");
+              setStudentName("");
             }}>
               返回首頁
             </button>
