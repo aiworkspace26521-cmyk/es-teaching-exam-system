@@ -188,7 +188,7 @@ function QuestionGraphic({ graphic }) {
           {/* Back faces (dashed) */}
           <line x1="90" y1="110" x2="90" y2="40" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="4" />
           <line x1="90" y1="110" x2="190" y2="110" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="4" />
-          <line x1="90" y1="40" x2="40" y2="40" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="4" />
+          <line x1="40" y1="140" x2="90" y2="110" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="4" />
           {/* Front Face */}
           <rect x="40" y="70" width="100" height="70" fill="none" stroke="var(--secondary)" strokeWidth="2" />
           {/* Back Top/Right */}
@@ -209,7 +209,7 @@ function QuestionGraphic({ graphic }) {
           {/* Back faces (dashed) */}
           <line x1="80" y1="110" x2="80" y2="40" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="4" />
           <line x1="80" y1="110" x2="150" y2="110" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="4" />
-          <line x1="80" y1="40" x2="40" y2="40" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="4" />
+          <line x1="40" y1="150" x2="80" y2="110" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" strokeDasharray="4" />
           {/* Front Face */}
           <rect x="40" y="80" width="70" height="70" fill="none" stroke="var(--accent)" strokeWidth="2" />
           {/* Perspective lines */}
@@ -696,6 +696,7 @@ ${subject === "數學" ? `
 - 必須在生成 JSON 前，於心智中對每一道數學題進行「反向代回計算驗算」，確保答案 100% 正確。
 - 【防錯案例 1 - 小數除法餘數問題】：若題目為「佳佳用 25.5 公尺的緞帶，每 3 公尺剪成一段，最多剪成幾段？還剩幾公尺？」，商必須取整數（8段），餘數必須嚴格等於「被除數 - 除數 * 商」（即 25.5 - 3 * 8 = 1.5 公尺）。嚴格禁止將餘數寫作 0.5，且解析必須完全邏輯正確。
 - 【防錯案例 2 - 中文大數讀寫問題】：中文數字讀寫（如「八千零七萬零九十」）必須依「四位一節」（萬級、個級）精確拆解（8007萬與0090個 -> 80070090）。確保選項與正確答案的數值完全精確對應，禁止將 80070090 的正確答案設成 80700090。
+- 【防錯案例 3 - 圖文一致性問題】：如果題目文字中出現『如圖』、『下圖』等字眼，則該題目的 JSON 必須包含對應的 "graphic" 欄位，且絕對不能為 null；反之，若該題目沒有附圖 ("graphic": null)，則題目文字中絕對禁止出現『如圖』或『下圖』。
 - 確保所有題目數據合理、可整除（或按題目要求保留餘數），解析 (solution) 必須直接寫出公式或計算過程，不可有邏輯不通的言論。
 ` : ""}
 
