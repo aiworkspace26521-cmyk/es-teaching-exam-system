@@ -276,10 +276,16 @@ function QuestionGraphic({ graphic }) {
           <circle cx="190" cy="75" r="6" fill="var(--bg-main)" stroke="var(--primary)" strokeWidth="1.5" />
           <line x1="196" y1="75" x2="230" y2="75" stroke="var(--text-muted)" strokeWidth="1.5" strokeDasharray="3" />
           {/* Tag Content */}
-          <text x="100" y="55" fill="var(--text-primary)" fontSize="14" fontWeight="bold" textAnchor="middle">大衣定價: {params.price} 元</text>
+          <text x="100" y="55" fill="var(--text-primary)" fontSize="13" fontWeight="bold" textAnchor="middle">
+            {(params.item || "商品") + "定價: " + (params.price || "0") + " 元"}
+          </text>
           <rect x="40" y="65" width="120" height="1" fill="rgba(255,255,255,0.1)" />
-          <text x="45" y="85" fill="var(--secondary)" fontSize="11" textAnchor="start">① 家樂福：打八折</text>
-          <text x="45" y="105" fill="var(--accent)" fontSize="11" textAnchor="start">② 大潤發：便宜 25%</text>
+          {params.discount1 && (
+            <text x="45" y="85" fill="var(--secondary)" fontSize="11" textAnchor="start">① {params.discount1}</text>
+          )}
+          {params.discount2 && (
+            <text x="45" y="105" fill="var(--accent)" fontSize="11" textAnchor="start">② {params.discount2}</text>
+          )}
         </svg>
       )}
 
@@ -653,9 +659,9 @@ function App() {
     let openRules = "";
 
     if (subject === "數學") {
-      mcRules = `- 選擇題需要包含至少 1 題具有 "graphic" 欄位以利前端渲染。圖形題類型：\n  - 長方體表面積："graphic": { "type": "prism", "params": { "length": "10cm", "width": "6cm", "height": "5cm" } }\n  - 正方體表面積："graphic": { "type": "cube", "params": { "edge": "8cm" } }\n  - 折線圖讀圖題："graphic": { "type": "lineChart", "params": {} }\n  - 定價與折扣應用題："graphic": { "type": "tag", "params": { "price": "1200" } }`;
+      mcRules = `- 選擇題需要包含至少 1 題具有 "graphic" 欄位以利前端渲染。圖形題類型：\n  - 長方體表面積："graphic": { "type": "prism", "params": { "length": "10cm", "width": "6cm", "height": "5cm" } }\n  - 正方體表面積："graphic": { "type": "cube", "params": { "edge": "8cm" } }\n  - 折線圖讀圖題："graphic": { "type": "lineChart", "params": {} }\n  - 定價與折扣應用題："graphic": { "type": "tag", "params": { "item": "襯衫", "price": "1200", "discount1": "打八折" } }`;
       blankRules = `- 答案需簡短明確 (數字或特定名稱)。\n- 若有數學符號（如分數、平方或根號），使用大括號 {} 標記，例如 {frac(3,4)} 代表 3/4 分數，{x^2} 代表平方。`;
-      openRules = `- 每一題必須拆分為兩個子題 (1) 佔 3 分，(2) 佔 4.5 分。\n- ⚠️必須包含至少 1 題具有 "graphic" 欄位以利前端渲染。圖形題類型：\n  - 長方體表面積："graphic": { "type": "prism", "params": { "length": "10cm", "width": "6cm", "height": "5cm" } }\n  - 正方體表面積："graphic": { "type": "cube", "params": { "edge": "8cm" } }\n  - 定價與折扣應用題："graphic": { "type": "tag", "params": { "price": "4500" } }\n  - 長方體倉庫四周油漆題："graphic": { "type": "warehouse", "params": { "length": "12m", "width": "8m", "height": "4m" } }`;
+      openRules = `- 每一題必須拆分為兩個子題 (1) 佔 3 分，(2) 佔 4.5 分。\n- ⚠️必須包含至少 1 題具有 "graphic" 欄位以利前端渲染。圖形題類型：\n  - 長方體表面積："graphic": { "type": "prism", "params": { "length": "10cm", "width": "6cm", "height": "5cm" } }\n  - 正方體表面積："graphic": { "type": "cube", "params": { "edge": "8cm" } }\n  - 定價與折扣應用題："graphic": { "type": "tag", "params": { "item": "電鍋", "price": "4500", "discount1": "打八五折" } }\n  - 長方體倉庫四周油漆題："graphic": { "type": "warehouse", "params": { "length": "12m", "width": "8m", "height": "4m" } }`;
     } else if (subject === "國語") {
       mcRules = `- 包含字音字形辨析、詞義理解、修辭判定。`;
       blankRules = `- 代表國字注音與改錯字。例如：「在繁複的功課壓力下，我們依然要保持開朗的心境，不要因為挫折而自爆自棄。」錯字為（ 爆 ），應改正為（ 暴 ）。`;
@@ -697,6 +703,7 @@ ${subject === "數學" ? `
 - 【防錯案例 1 - 小數除法餘數問題】：若題目為「佳佳用 25.5 公尺的緞帶，每 3 公尺剪成一段，最多剪成幾段？還剩幾公尺？」，商必須取整數（8段），餘數必須嚴格等於「被除數 - 除數 * 商」（即 25.5 - 3 * 8 = 1.5 公尺）。嚴格禁止將餘數寫作 0.5，且解析必須完全邏輯正確。
 - 【防錯案例 2 - 中文大數讀寫問題】：中文數字讀寫（如「八千零七萬零九十」）必須依「四位一節」（萬級、個級）精確拆解（8007萬與0090個 -> 80070090）。確保選項與正確答案的數值完全精確對應，禁止將 80070090 的正確答案設成 80700090。
 - 【防錯案例 3 - 圖文一致性問題】：如果題目文字中出現『如圖』、『下圖』等字眼，則該題目的 JSON 必須包含對應的 "graphic" 欄位，且絕對不能為 null；反之，若該題目沒有附圖 ("graphic": null)，則題目文字中絕對禁止出現『如圖』或『下圖』。
+- 【防錯案例 4 - 折扣標籤 (tag) 與題目內容對稱問題】：若題目有關於價格定價、折扣或比價，且使用 "type": "tag" 的圖形，其 params 中的 "item" (商品名稱，如『電鍋』、『襯衫』)、"price" (價格，如『4500』)、"discount1" (折扣描述1，如『打八五折』)、"discount2" (折扣描述2，選填) 必須與題目敘述完全一致。嚴禁題目是「襯衫打八折」，圖形標籤卻出現無關的「大衣、家樂福打八折、大潤發便宜25%」等預設硬編碼資訊。
 - 確保所有題目數據合理、可整除（或按題目要求保留餘數），解析 (solution) 必須直接寫出公式或計算過程，不可有邏輯不通的言論。
 ` : ""}
 
